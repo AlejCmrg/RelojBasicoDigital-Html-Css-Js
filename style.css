@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(imagenes/Aurora.jpg) #000;
+  background-size: cover;
+  color: #fff;
+  font-size: 16px;
+}
+
+.wrap {
+  width: 90%;
+  max-width: 1000px;
+}
+
+.widget {
+  width: 40%;
+  margin: 2em;
+}
+
+.widget p {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.fecha {
+  font-family: "Oswald", arial;
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  background: rgba(0,0,0,.5);
+  padding: 20px;
+  width: 100%;
+  }
+
+  .reloj {
+    font-family: "Oswald", arial;
+    width: 100%;
+    padding: 20px;
+    font-size: 4em;
+    text-align: center;
+    background-color: rgba(0,0,0,.5);
+  }
+
+  .reloj .caja-segundos {
+    display: inline-block;
+  }
+
+  .reloj .segundos,
+  .reloj .ampm {
+    font-size: 2rem;
+    display: block;
+  }
