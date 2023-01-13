@@ -1,5 +1,3 @@
-// function(){
-
   function actuaizarHora(){
 
           //variables para agignar valor a dia, fecha, etc;
@@ -24,21 +22,21 @@
 
           //variables para la hora accediendo al contenido por id;
 
-      let pHoras = document.getElementById('horas');
+        let pHoras = document.getElementById('horas');
 
-      let  pAMPM = document.getElementById('ampm');
+        let  pAMPM = document.getElementById('ampm');
 
-      let  pMinutos = document.getElementById('minutos');
+        let  pMinutos = document.getElementById('minutos');
 
-      let  pSegundos = document.getElementById('segundos');
+        let  pSegundos = document.getElementById('segundos');
 
-      let  pDiaSemana = document.getElementById('diaSemana');
+        let  pDiaSemana = document.getElementById('diaSemana');
 
-      let  pDia = document.getElementById('dia');
+        let  pDia = document.getElementById('dia');
 
-      let  pMes = document.getElementById('mes');
+        let  pMes = document.getElementById('mes');
 
-      let  pYear = document.getElementById('year');
+        let  pYear = document.getElementById('year');
 
 
           //array dias de semana y mes;
@@ -70,6 +68,7 @@
     pAMPM.textContent = ampm;
 
     if(minutos < 10){minutos = '0' + minutos};
+
     if(segundos < 10){segundos = '0' + segundos};
 
     pMinutos.textContent = minutos;
