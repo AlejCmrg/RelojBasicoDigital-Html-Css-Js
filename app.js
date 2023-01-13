@@ -1,62 +1,83 @@
-(function(){
+// function(){
 
-    var actuaizarHora = function(){
-          let fecha = new Date(),
-              horas = fecha.getHours(),
-              ampm,
-              minutos = fecha.getMinutes(),
-              segundos = fecha.getSeconds(),
-              diaSemana = fecha.getDay(),
-              dia = fecha.getDate(),
-              mes = fecha.getMonth(),
-              year = fecha.getFullYear();
+  function actuaizarHora(){
 
+          //variables para agignar valor a dia, fecha, etc;
 
-      let pHoras = document.getElementById('horas'),
-          pAMPM = document.getElementById('ampm'),
-          pMinutos = document.getElementById('minutos'),
-          pSegundos = document.getElementById('segundos'),
-          pDiaSemana = document.getElementById('diaSemana'),
-          pDia = document.getElementById('dia'),
-          pMes = document.getElementById('mes'),
-          pYear = document.getElementById('year');
+        let fecha = new Date()
 
+        let    horas = fecha.getHours();
 
-      let semana = ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];
-      pDiaSemana.textContent = semana[diaSemana];
+        let  ampm;
 
-      pDia.textContent = dia;
+        let minutos = fecha.getMinutes();
 
-      var meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+        let segundos = fecha.getSeconds();
 
-      pMes.textContent = meses[mes];
+        let  diaSemana = fecha.getDay();
 
-      pYear.textContent = year;
+        let  dia = fecha.getDate();
 
-      if(horas >= 12){
-          horas = horas - 12;
-          ampm = 'PM';
-      }else{
-        ampm = 'AM';
-      }
+        let mes = fecha.getMonth();
 
-      if(horas == 0){
-          horas = 12;
-      }
+        let year = fecha.getFullYear();
 
-      pHoras.textContent = horas;
-      pAMPM.textContent = ampm;
+          //variables para la hora accediendo al contenido por id;
 
-      if(minutos < 10){minutos = '0' + minutos};
-      if(segundos < 10){segundos = '0' + segundos};
+      let pHoras = document.getElementById('horas');
 
-      pMinutos.textContent = minutos;
-      pSegundos.textContent = segundos;
+      let  pAMPM = document.getElementById('ampm');
+
+      let  pMinutos = document.getElementById('minutos');
+
+      let  pSegundos = document.getElementById('segundos');
+
+      let  pDiaSemana = document.getElementById('diaSemana');
+
+      let  pDia = document.getElementById('dia');
+
+      let  pMes = document.getElementById('mes');
+
+      let  pYear = document.getElementById('year');
 
 
-    };
+          //array dias de semana y mes;
 
-    actuaizarHora();
-    let intervalo = setInterval(actuaizarHora, 1000);
+    let semana = ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];
+    pDiaSemana.textContent = semana[diaSemana];
 
-}())
+    pDia.textContent = dia;
+
+    let meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+
+    pMes.textContent = meses[mes];
+
+    pYear.textContent = year;
+
+    if(horas >= 12){
+        horas = horas - 12;
+        ampm = 'PM';
+    }else{
+      ampm = 'AM';
+    }
+
+    if(horas == 0){
+        horas = 12;
+    }
+
+    pHoras.textContent = horas;
+
+    pAMPM.textContent = ampm;
+
+    if(minutos < 10){minutos = '0' + minutos};
+    if(segundos < 10){segundos = '0' + segundos};
+
+    pMinutos.textContent = minutos;
+
+    pSegundos.textContent = segundos;
+
+
+  };
+
+  actuaizarHora();
+  let intervalo = setInterval(actuaizarHora, 1000);
